@@ -121,7 +121,7 @@ $(function() {
 			}
 		);
 	// Start the live stream scanner when the modal opens
-	$('#open-camera').on('shown.bs.modal', function (e) {
+	$('#open-camera').on('click', function (e) {
 		Quagga.init(
 			liveStreamConfig, 
 			function(err) {
@@ -162,8 +162,7 @@ $(function() {
 	Quagga.onDetected(function(result) {    		
 		if (result.codeResult.code){
 			$('#scanner_input').val(result.codeResult.code);
-			Quagga.stop();	
-			setTimeout(function(){ $('#livestream_scanner').modal('hide'); }, 1000);			
+			Quagga.stop();		
 		}
 	});
     
