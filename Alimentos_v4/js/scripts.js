@@ -168,7 +168,8 @@ $(function() {
 		if (result.codeResult.code){
 			$('#inputText').val(result.codeResult.code);
 			Quagga.stop();	
-			setTimeout(function(){ $('#livestream_scanner').modal('hide'); }, 1000);			
+			setTimeout(function(){ $('#livestream_scanner').modal('hide'); }, 1000);
+			document.getElementById('buttonSearch').click();	
 		}
 	});
     
