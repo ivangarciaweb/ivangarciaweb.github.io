@@ -103,10 +103,18 @@ $(function() {
 			},
 			numOfWorkers: (navigator.hardwareConcurrency ? navigator.hardwareConcurrency : 4),
 			decoder: {
-				"readers":[
-					{"format":"ean_reader","config":{}}
+				readers: [
+					"code_128_reader",
+					"ean_reader",
+					"ean_8_reader",
+					"code_39_reader",
+					"code_39_vin_reader",
+					"codabar_reader",
+					"upc_reader",
+					"upc_e_reader",
+					"i2of5_reader"
 				]
-			},
+			}
 			locate: true
 		};
 	// The fallback to the file API requires a different inputStream option. 
@@ -166,13 +174,6 @@ $(function() {
 		}
 	});
     
-	// Stop quagga in any case, when the modal is closed
-    $('#livestream_scanner').on('click, function(){
-    	if (Quagga){
-    		Quagga.stop();	
-    	}
-    });
-	
 	// Call Quagga.decodeSingle() for every file selected in the 
 	// file input
 	$("#open-camera input:file").on("change", function(e) {
