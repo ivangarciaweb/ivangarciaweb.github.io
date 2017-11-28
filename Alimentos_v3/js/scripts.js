@@ -162,16 +162,10 @@ $(function() {
 	Quagga.onDetected(function(result) {    		
 		if (result.codeResult.code){
 			$('#scanner_input').val(result.codeResult.code);
-			Quagga.stop();		
+			Quagga.stop(); 		
 		}
 	});
     
-	// Stop quagga in any case, when the modal is closed
-    $('#open-camera').on('click, function(){
-    	if (Quagga){
-    		Quagga.stop();	
-    	}
-    });
 	
 	// Call Quagga.decodeSingle() for every file selected in the 
 	// file input
