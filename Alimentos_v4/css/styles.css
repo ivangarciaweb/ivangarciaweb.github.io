@@ -8,6 +8,7 @@ body{
   background: #000 url(../img/food-bg.jpg) repeat-y center center;
   background-size: cover;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 
@@ -59,6 +60,29 @@ body{
   outline: none;
 }
 
+.btn-barcode{
+  margin: 30px auto;
+  padding: 10px;
+  text-transform: uppercase;
+  background: #4285f4;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 3px;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+}
+
+.btn-barcode i{
+  font-size: 50px;
+  display: block;
+  margin-bottom: 10px;
+}
+.btn-barcode span{
+  display: block;
+  font-size:: 10px;
+}
+
 .input #buttonSearch{
   padding: 10px;
   text-transform: uppercase;
@@ -78,7 +102,7 @@ body{
   min-height: 55vh;
   background: rgba(255,255,255,0.85);
   display: block;
-  margin: 5% auto;
+  margin: 0 auto;
   padding: 20px 20px 40px;
   position: relative;
 }
