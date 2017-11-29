@@ -238,7 +238,7 @@ body{
   bottom: 0;
   left: 0;
   right: 0;
-  height: 42%;
+  height: 100%;
 }
 
 .modal-content {
@@ -263,6 +263,19 @@ body{
   height: 100%;
 }
 
+.viewport{
+  height: 100%;
+}
+audio, canvas, progress, video {
+  width: 100%;
+}
+
+canvas, video{
+  position: absolute;  
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
 /**Button close**/
 .modal-footer .btn-close{
   color: #ffffff;
@@ -296,14 +309,6 @@ body{
   font-size: 20px;
   vertical-align: sub;
   margin-right: 4px;
-}
-
-audio, canvas, progress, video {
-  width: 100%;
-}
-
-canvas, video{
-  position: absolute;
 }
 
 @media(min-width: 768px){
