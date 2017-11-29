@@ -1497,3 +1497,6 @@
 .icon-IcoMoon:before {
   content: "\eaea";
 }
+.icon-close:before {
+  content: "\eaeb";
+}
