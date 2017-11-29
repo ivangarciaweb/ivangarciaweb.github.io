@@ -8,9 +8,6 @@ body{
   background: #000 url(../img/SpaceX.jpg) repeat-y center center;
 }
 
-iframe{
-  height: 500px;
-}
 
 .logo{
   position: absolute;
@@ -20,7 +17,7 @@ iframe{
 }
 
 .logo img{
-  width: 40%;
+  width: 80%;
   display: block;
   margin: 0 auto;
 }
@@ -32,10 +29,9 @@ iframe{
 
 .dropdown{
   position: absolute;
-  top: 15%;
-  width: 50%;
-  left: 50%;
-  margin-left: -25%;
+  top: 20%;
+  width: 95%;
+  left: 2.5%;
 }
 
 .dropdown button{
@@ -45,10 +41,10 @@ iframe{
     background: rgba(255,255,255,0.7);
     color: #000;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 14px;
     border: none;
-    border-radius: 0;
-    padding: 20px;
+    border-radius: 0;    
+    padding: 20px 30px;
     letter-spacing: 1px;
 }
 
@@ -98,9 +94,8 @@ iframe{
 }
 
 #launches li{
-  float: left;
-  width: 18%;
-  margin: 1% 1%;
+  width: 95%;
+  margin: 10% 2.5%;
   background: rgba(255,255,255,0.55);
   padding: 20px;
   list-style-type: none; 
@@ -116,4 +111,81 @@ iframe{
 }
 #launches li p span{
   font-weight: normal;
+}
+
+
+@media(min-width: 768px){
+  
+  .logo img{
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .dropdown{
+    top: 15%;
+    width: 70%;
+    left: 50%;
+    margin-left: -35%;
+  }
+  
+  .dropdown button{
+      padding: 20px;
+  }
+   
+  #launches li{
+    float: left;
+    width: 48%;
+    margin: 1% 1%;
+    padding: 20px;
+    min-height: 560px;
+  }
+}
+
+
+@media(min-width: 992px){
+  
+  .dropdown{
+    width: 60%;
+    margin-left: -30%;
+  }
+  
+  .dropdown button{
+      font-size: 16px;
+      padding: 20px 25px;
+  }
+   
+  #launches li{
+    width: 31%;
+    margin: 1% 1.1%;
+    min-height: 580px;
+  }
+}
+
+
+@media(min-width: 1200px){
+  
+  .logo img{
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .dropdown{
+    width: 50%;
+    margin-left: -25%;
+  }
+  
+  .dropdown button{
+      font-size: 20px;
+      padding: 20px;
+  }
+   
+  #launches li{
+    float: left;
+    width: 18%;
+    margin: 1% 1%;
+    padding: 20px;
+    min-height: 580px;
+  }
 }
