@@ -280,7 +280,7 @@ canvas, video{
 .modal-footer .btn-close{
   color: #ffffff;
   position: absolute;
-  top: -35px;
+  top: 3px;
   right: 3px;
   font-size: 30px;
   padding: 0;
@@ -291,7 +291,7 @@ canvas, video{
 
 .modal-footer .btn-use-camera{
   position: absolute;
-  bottom: -45px;
+  bottom: 10px;
   left: 5%;
   width: 90%;
   padding: 10px;
