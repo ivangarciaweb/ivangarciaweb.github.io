@@ -7,34 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/icons-font.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
     <header>
       <div class="logo">
-        <h1>Buscador de alimentos</h1>
-        <p>Introduce el código de barras de un producto para conocer su información</p>
+        <h1>FoodInfo</h1>
+        <img src="img/barcode.svg">
       </div>
     </header>
     <main>
-      <div class="input">
-        <input id="inputText" type="number" placeholder="Introduce el código de barras de un producto cualquiera...">
-        <button id="buttonSearch">Buscar</button> 
-      </div>
 
       <div class="row">
         <div class="col-xs-12 text-center">
+            <div class="text-intro">
+              <h4>Bienvenido a FoodInfo, la app con la que podrás saber toda la información de un alimento sólamente con escanear su código de barras</h4>
+            </div>
+          <div class="input">
+            <input id="inputText" type="number" placeholder="Introduce el código de barras de un producto cualquiera...">
+            <button id="buttonSearch">
+              <i class="icon-search"></i>
+              <span>Buscar</span>
+            </button> 
+          </div>
           <div class="input-group">
             <span class="input-group-btn"> 
               <button class="btn-barcode" type="button" data-toggle="modal" data-target="#livestream_scanner">
                 <i class="icon-barcode"></i>
-                <span>Escanear</span>
-                <span>código</span>
+                <span>Escanear código</span>
               </button> 
             </span>
           </div>
         </div>
       </div>
+      <div id="productInfo">
+        <h4>Aún no has escrito ningún código de barras</h4>
+      </div>
+
+      
       <div class="modal" id="livestream_scanner">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -55,9 +66,6 @@
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
 
-      <div id="productInfo">
-        <h4>¡Psst! Aún no has escrito ningún código de barras. Introdúcelo en la caja superior para conocer información sobre el producto...</h4>
-      </div>
     </main>
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>

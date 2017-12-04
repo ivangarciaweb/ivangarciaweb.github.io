@@ -42,7 +42,13 @@ function writeProductInfo(productsList, product){
 			<li><p><strong>Categoria:</strong>${product.product.categories}</p></li>
 			<li><p><strong>País de procedencia:</strong>${product.product.countries}</p></li>
 			<li><p><strong>Ingredientes:</strong>${product.product.ingredients_text}</p></li>
-			<li><p><strong>Apto para:</strong>${product.product.labels}</p></li>
+			<li><p><strong>Alergenos:</strong>${product.product.allergens}</p></li>
+			<li><p><strong>ingredientes 2:</strong>${product.product.ingredients_text_with_allergens}</p></li>
+			<li><p><strong>Nivel de grasa:</strong>${product.product.nutrient_levels.fat}</p></li>
+			<li><p><strong>Nivel de sal:</strong>${product.product.nutrient_levels.salt}</p></li>
+			<li><p><strong>Nivel de azúcares:</strong>${product.product.nutrient_levels.sugars}</p></li>
+			<li><p><strong>Grado Nutricional:</strong>${product.product.nutrition_grades}</p></li>
+			<li><p><strong>Posibles trazas de:</strong>${product.product.traces}</p></li>
 			<li><p><strong>Última actualización:</strong>${product.product.last_edit_dates_tags[2]}</p></li>
 			<li><p><strong>Envase:</strong>${product.product.packaging}</p></li>
 			<li><p><strong>Peso:</strong>${product.product.quantity}</p></li>
