@@ -28,6 +28,26 @@ function clearList(productsList){
 
 function writeProductInfo(productsList, product){
 	//Cuando recibimos los datos generamos el HTML que mostraremos
+
+	// PARAMETRO SALUBRIDAD, A,B,C,D,E
+
+	/*const salubridad = {};
+	salubridad.valor = product.product.salubridad // A,B,C,D,E
+	if (salubridad.valor == 'A') salubridad.color = 'green';
+	if (salubridad.valor == 'B') salubridad.color = 'yellow';
+	if (salubridad.valor == 'C') salubridad.color = 'orange';
+	if (salubridad.valor == 'D') salubridad.color = 'red';
+	if (salubridad.valor == 'E') salubridad.color = 'black';
+	else {
+		salubridad.valor = 'Sin datos';
+		salubridad.color = 'grey';
+	}*/
+
+
+	/*<li><p style="background-color: ${salubridad.color}"><strong>Peso:</strong>${salubridad.valor}</p></li>*/
+
+
+
 	if(product.status_verbose == "product found" && product.code != null){
 		productsList.innerHTML = `
 		<h2>${product.product.product_name}</h2>
