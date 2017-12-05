@@ -41,3 +41,5 @@ function clickNumberWithRange(number, range){
         console.log(a[index]);
     }
 }
+
+clickNumberWithRange(4,15);
