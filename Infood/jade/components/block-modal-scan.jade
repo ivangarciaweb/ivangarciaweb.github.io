@@ -1,0 +1,16 @@
+.container
+    .row
+        #livestream_scanner.modal.block-modal-scan
+            .modal-dialog
+                .modal-content
+                    .modal-body(style='position: static')
+                        #interactive.viewport
+                        .error
+                    .modal-footer
+                        label.btn.btn-default.pull-left.btn-use-camera
+                            i.icon-camera
+                            |  Usar cámara del dispositivo
+                            input.hidden(type='file', accept='image/*;capture=camera', capture='camera')
+                        button.btn.btn-close(type='button', data-dismiss='modal')
+                            i.icon-close
+        

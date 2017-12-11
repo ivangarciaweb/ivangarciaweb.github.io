@@ -1,0 +1,47 @@
+.block-input-search{
+    .input {
+        padding: 0 0 0px;
+        text-align: center;
+        #inputText {
+            width: 100%;
+            padding: 10px 15px;
+            border: none;
+            background: rgba(255, 255, 255, 0.8);
+            color: #006df0;
+            font-size: 16px;
+            font-style: italic;
+            letter-spacing: 1px;
+            outline: none;
+        }
+        #buttonSearch {
+            margin: 0 auto;
+            padding: 15px;
+            text-transform: uppercase;
+            background: #006df0;
+            color: #ffffff;
+            font-size: 12px;
+            letter-spacing: 3px;
+            border: none;
+            outline: none;
+            width: 100%;
+            i {
+                vertical-align: sub;
+                font-size: 18px;
+            }
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+}
+@media(min-width:768px){
+
+}
+
+@media(min-width:992px){
+    
+}
+
+@media(min-width:1200px){
+    
+}

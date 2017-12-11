@@ -73,19 +73,53 @@ function writeProductInfo(productsList, product){
 			<li><p><strong>Envase:</strong>${product.product.packaging}</p></li>
 			<li><p><strong>Peso:</strong>${product.product.quantity}</p></li>
 			<li><p><strong>Lugar de fabricación:</strong>${product.product.manufacturing_places}</p></li>
-		</ul>
-		<ul class="productNutritionalValue">
-			<h3>Valor Nutricional por cada 100g</h3>
-			<li><p><strong>V. Energético</strong>${product.product.nutriments.energy_100g}</p></li>
-			<li><p><strong>Carbohidratos</strong>${product.product.nutriments.carbohydrates_100g}</p></li>
-			<li><p><strong>Grasas</strong>${product.product.nutriments.fat_100g}</p></li>
-			<li><p><strong>Fibra</strong>${product.product.nutriments.fiber_100g}</p></li>
-			<li><p><strong>Proteinas</strong>${product.product.nutriments.proteins_100g}</p></li>
-			<li><p><strong>Sal</strong>${product.product.nutriments.salt_100g}</p></li>
-			<li><p><strong>G. Saturadas</strong>${product.product.nutriments.fat_100g}</p></li>
-			<li><p><strong>Sodio</strong>${product.product.nutriments.sodium_100g}</p></li>
-			<li><p><strong>Azucares</strong>${product.product.nutriments.sugars_100g}</p></li>
-		</ul>
+		</ul>		
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th>Valor Nutricional</th>
+					<th>100g</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td>Valor Energético</td>
+						<td>${product.product.nutriments.energy_100g}</td>
+					</tr>
+					<tr>
+						<td>Carbohidratos</td>
+						<td>${product.product.nutriments.carbohydrates_100g}</td>
+					</tr>
+					<tr>
+						<td>Grasas</td>
+						<td>${product.product.nutriments.fat_100g}</td>
+					</tr>
+					<tr>
+						<td>Fibra</td>
+						<td>${product.product.nutriments.fiber_100g}</td>
+					</tr>
+					<tr>
+						<td>Proteinas</td>
+						<td>${product.product.nutriments.proteins_100g}</td>
+					</tr>
+					<tr>
+						<td>Sal</td>
+						<td>${product.product.nutriments.salt_100g}</td>
+					</tr>
+					<tr>
+						<td>Grasas Saturadas</td>
+						<td>${product.product.nutriments.fat_100g}</td>
+					</tr>
+					<tr>
+						<td>Sodio</td>
+						<td>${product.product.nutriments.sodium_100g}</td>
+					</tr>
+					<tr>
+						<td>Azucares</td>
+						<td>${product.product.nutriments.sugars_100g}</td>
+					</tr>
+			</tbody>
+		</table>
 		`;		
 	}
 	else{

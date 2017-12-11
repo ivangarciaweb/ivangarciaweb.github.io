@@ -1,0 +1,87 @@
+.block-modal-scan{
+    background: rgba(0, 0, 0, 0.7);        
+    .modal-dialog {
+        position: absolute;
+        width: 100%;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+    }        
+    .modal-content {
+        border-radius: 0;
+        border: none;
+        height: 100%;
+        background: none;
+    }        
+    .modal-body {
+        padding: 0;
+        height: 100%;
+        background: none;
+    }        
+    .modal-footer {
+        padding: 0;
+        border: none;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 100%;
+        .btn-close {
+            color: #ffffff;
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            font-size: 30px;
+            padding: 0;
+            line-height: normal;
+            font-weight: normal;
+            background: none;
+        }
+        .btn-use-camera {
+            position: absolute;
+            bottom: 10px;
+            left: 5%;
+            width: 90%;
+            padding: 10px;
+            text-transform: uppercase;
+            background: #4285f4;
+            color: #ffffff;
+            font-size: 12px;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 15px;
+            outline: none;
+            i {
+                font-size: 20px;
+                vertical-align: sub;
+                margin-right: 4px;
+            }
+        }
+    }        
+    .viewport {
+        height: 100%;
+    }        
+    audio, canvas, progress, video {
+        width: 100%;
+    }        
+    canvas, video {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}
+
+@media(min-width:768px){
+
+}
+
+@media(min-width:992px){
+    
+}
+
+@media(min-width:1200px){
+    
+}

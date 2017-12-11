@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Infood | Información sobre alimentos</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Twitter Card data-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@publisher_handle">
+    <meta name="twitter:title" content="Titulo SEO">
+    <meta name="twitter:description" content="descripción SEO">
+    <meta name="twitter:creator" content="@author_handle">
+    <meta name="twitter:image" content="http://www.example.com/image.jpg">
+    <!-- Open Graph data = FACEBOOK-->
+    <meta property="og:title" content="Titulo SEO">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.example.com">
+    <meta property="og:image" content="http://www.example.com/image.jpg">
+    <meta property="og:description" content="Descripción SEO">
+    <meta property="og:site_name" content="Nombre de la web">
+    <meta property="fb:admins" content="Si existe se pondra aquí la ID de facebook">
+    <meta name="description" content="Descripcion">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <link rel="canonical" href="">
+    <link rel="alternate" hreflang="en" href="">
+    <link rel="alternate" hreflang="pt" href="">
+    <link rel="alternate" hreflang="es-ES" href="">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Infood</h1><img src="img/barcode.svg">
+      </div>
+    </header>
+    <main role="main">
+      <div class="container">
+        <div class="block-input-search">
+          <div class="row">
+            <div class="col-xs-12 text-center mT60">
+              <div class="input">
+                <input id="inputText" type="number" placeholder="Introduce el código de barras de un producto cualquiera...">
+                <button id="buttonSearch"><i class="icon-search"></i><span>Buscar</span></button>
+              </div>
+              <div class="input-group"><span class="input-group-btn">
+                  <button type="button" data-toggle="modal" data-target="#livestream_scanner" class="btn-barcode"><i class="icon-barcode"></i><span>Escanear código</span></button></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="block-info-box">
+          <div class="row">
+            <div id="productInfo">
+              <h4>Aún no has escrito ningún código de barras</h4>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div id="livestream_scanner" class="modal block-modal-scan">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div style="position: static" class="modal-body">
+                    <div id="interactive" class="viewport"></div>
+                    <div class="error"></div>
+                  </div>
+                  <div class="modal-footer">
+                    <label class="btn btn-default pull-left btn-use-camera"><i class="icon-camera"></i> Usar cámara del dispositivo
+                      <input type="file" accept="image/*;capture=camera" capture="camera" class="hidden">
+                    </label>
+                    <button type="button" data-dismiss="modal" class="btn btn-close"><i class="icon-close"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="row"></div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/scripts.min.js"></script>
+  </body>
+</html>

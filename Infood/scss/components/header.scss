@@ -1,0 +1,37 @@
+header{
+    .logo {
+        width: 100%;
+        padding: 10px 2%;
+        text-align: center;
+        color: #ffffff;
+        background: #ffffff;
+        h1 {
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: 2px;
+            margin: 0;
+            display: inline-block;
+            color: #006df0;
+            vertical-align: middle;
+            padding-right: 15px;
+        }
+        img {
+            display: inline-block;
+            letter-spacing: 1px;
+            width: 42px;
+        }
+    }
+}
+
+
+@media(min-width:768px){
+
+}
+
+@media(min-width:992px){
+    
+}
+
+@media(min-width:1200px){
+    
+}

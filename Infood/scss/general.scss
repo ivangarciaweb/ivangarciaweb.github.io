@@ -1,0 +1,94 @@
+@charset "UTF-8";
+*{
+  margin:0;
+  padding: 0;
+}
+
+body{
+  background: #000 url(../img/frutas-bg.jpg) repeat-y center center;
+  background-size: cover;
+  height: 100vh;
+  font-size: 14px;
+  overflow-x: hidden;
+  font-family: 'Montserrat-Regular';
+}
+
+.main-logo{
+    color: #ffffff;
+    span{
+        text-shadow: 0px 0px 20px rgba(0,0,0,.9);
+        font-size:48px;
+    }
+    img{
+        display: block;
+        margin: 0 auto;
+        width: 40%;
+    }
+}
+
+.text-intro {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    bottom: 2.5vw;
+    color: #000;
+    width: 95vw;
+    left: 2.5vw;
+    background: rgba(255,255,255,0.85);
+    h4 {
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 26px;
+        padding: 4vh 6vw 2vh;
+        margin: 0;
+    }
+    a{
+        display: block;
+        width: 90%;
+    }
+  }
+
+  /**Button barcode**/
+
+.btn-barcode {
+    margin: 15px auto;
+    padding: 15px;
+    text-transform: uppercase;
+    background: #006df0;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border: none;
+    outline: none;
+    width: 100%;
+    i {
+        font-size: 50px;
+        display: block;
+        margin-bottom: 10px;
+    }
+    span {
+        display: block;
+        font-size: 12px;
+    }
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited{
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:992px) {
+
+}
+
+@media(min-width:1200px){
+    
+}
+
