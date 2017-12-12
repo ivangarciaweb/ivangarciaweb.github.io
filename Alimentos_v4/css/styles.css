@@ -220,9 +220,17 @@ body{
 }
 
 #productInfo .productProperties li p strong{
-  margin-right:8px;
-  font-size:18px;
-  font-style: strong;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  background: #dcdcdc;
+  padding: 5px 10px;
+}
+#productInfo .productProperties li p span{
+  font-size: 16px;
+  display: block;
+  border: 1px solid #dcdcdc;
+  padding: 5px 10px;
 }
 
 #productInfo .productNutritionalValue{

@@ -58,22 +58,22 @@ function writeProductInfo(productsList, product){
 			<li><img src="${product.product.image_url}"></p></li>
 		</ul>	
 		<ul class="productProperties">
-			<li><p><strong>Marca:</strong>${product.product.brands}</p></li>
-			<li><p><strong>Nombre del producto:</strong>${product.product.product_name}</p></li>
-			<li><p><strong>Código de barras:</strong>${product.product.code}</p></li>
-			<li><p><strong>Categoria:</strong>${product.product.categories}</p></li>
-			<li><p><strong>País de procedencia:</strong>${product.product.countries}</p></li>
-			<li><p><strong>Ingredientes:</strong>${product.product.ingredients_text}</p></li>
-			<li><p><strong>Alérgenos:</strong>${product.product.allergens}</p></li>
-			<li><p><strong>Nivel de grasa:</strong>${product.product.nutrient_levels.fat}</p></li>
-			<li><p><strong>Nivel de sal:</strong>${product.product.nutrient_levels.salt}</p></li>
-			<li><p><strong>Nivel de azúcares:</strong>${product.product.nutrient_levels.sugars}</p></li>
-			<li><p><strong>Posibles trazas de:</strong>${product.product.traces}</p></li>
-			<li><p><strong>Última actualización:</strong>${product.product.last_edit_dates_tags[2]}</p></li>
-			<li><p><strong>Envase:</strong>${product.product.packaging}</p></li>
-			<li><p><strong>Peso:</strong>${product.product.quantity}</p></li>
-			<li><p><strong>Lugar de fabricación:</strong>${product.product.manufacturing_places}</p></li>
-			<li><p><strong>Nutriscore:</strong></p><img src="${nutriscore.src}" alt="${product.product.brands}"></li>
+			<li><p><strong>Marca:</strong><span>${product.product.brands}</span></p></li>
+			<li><p><strong>Nombre del producto:</strong><span>${product.product.product_name}</span></p></li>
+			<li><p><strong>Código de barras:</strong><span>${product.product.code}</span></p></li>
+			<li><p><strong>Categoria:</strong><span>${product.product.categories}</span></p></li>
+			<li><p><strong>País de procedencia:</strong><span>${product.product.countries}</span></p></li>
+			<li><p><strong>Ingredientes:</strong><span>${product.product.ingredients_text}</span></p></li>
+			<li><p><strong>Alérgenos:</strong><span>${product.product.allergens}</span></p></li>
+			<li><p><strong>Nivel de grasa:</strong><span>${product.product.nutrient_levels.fat}</span></p></li>
+			<li><p><strong>Nivel de sal:</strong><span>${product.product.nutrient_levels.salt}</span></p></li>
+			<li><p><strong>Nivel de azúcares:</strong><span>${product.product.nutrient_levels.sugars}</span></p></li>
+			<li><p><strong>Posibles trazas de:</strong><span>${product.product.traces}</span></p></li>
+			<li><p><strong>Última actualización:</strong><span>${product.product.last_edit_dates_tags[2]}</span></p></li>
+			<li><p><strong>Envase:</strong><span>${product.product.packaging}</span></p></li>
+			<li><p><strong>Peso:</strong><span>${product.product.quantity}</span></p></li>
+			<li><p><strong>Lugar de fabricación:</strong><span>${product.product.manufacturing_places}</span></p></li>
+			<li><p><strong>Nutriscore:</strong><span><img src="${nutriscore.src}" alt="${product.product.brands}"></span></p></li>
 		</ul>		
 		<table class="table table-bordered">
 			<thead>
