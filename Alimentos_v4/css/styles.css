@@ -134,8 +134,8 @@ body{
 }
 
 #productInfo{
-  width: 90%;
-  background: rgba(255,255,255,0.65);
+  width: 100%;
+  background: rgba(255,255,255,0.90);
   display: block;
   margin: 0 auto;
   padding: 10px 20px;
@@ -209,17 +209,20 @@ body{
 #productInfo .productProperties li{
   list-style-type: none;
 }
+#productInfo .productProperties li img{
+  margin: 3vh auto;
+  display: block;
+}
 
 #productInfo .productProperties li p{
   font-size:16px;
-  font-style: italic;
   word-break: break-all;
 }
 
 #productInfo .productProperties li p strong{
   margin-right:8px;
   font-size:18px;
-  font-style: normal;
+  font-style: strong;
 }
 
 #productInfo .productNutritionalValue{
@@ -252,7 +255,7 @@ body{
 
 #productInfo .productNutritionalValue li p strong{
   margin-right:8px;
-  font-size:18px;
+  font-size:16px;
   font-style: normal;
   display: block;
 }
@@ -340,6 +343,10 @@ canvas, video{
   font-size: 20px;
   vertical-align: sub;
   margin-right: 4px;
+}
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+  border: 1px solid #000 !important;
 }
 
 @media(min-width: 768px){
