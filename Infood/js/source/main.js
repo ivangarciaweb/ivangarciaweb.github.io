@@ -2,47 +2,47 @@ let productsList = document.getElementById("productInfo");
 const url = 'https://world.openfoodfacts.org/api/v0/product/';
 
 
-function clearInput(inputItem){
+function clearInput(inputItem) {
 	inputItem.value = "";
 }
-function searchBarCode(url){
+function searchBarCode(url) {
 	//Creo la variable que almacenara los elementos donde estaré escuchando el click
 	let searchClick = document.getElementById("buttonSearch");
 	// Escuchamos el evento del botón buscar
-	searchClick.addEventListener("click", function(){
+	searchClick.addEventListener("click", function () {
 		//Almacenamos en una variable el contenido en texto del elemento donde hemos hecho click
-		let inputBarCode = document.getElementById("inputText");	
+		let inputBarCode = document.getElementById("inputText");
 		let inputValueSend = inputBarCode.value;
 		clearInput(inputBarCode);
 		//Llamamos a la función buildLaunch y le pasamos los parametros que vamos a necesitar
-		bringProductInfo(url , inputValueSend);
+		bringProductInfo(url, inputValueSend);
 	});
 }
 
 searchBarCode(url)
 
 
-function clearList(productsList){
+function clearList(productsList) {
 	productsList.innerHTML = "";
 }
 
-function writeProductInfo(productsList, product){
+function writeProductInfo(productsList, product) {
 	// NUTRISCORE, A,B,C,D,E
-	const nutriscore ={};
+	const nutriscore = {};
 	nutriscore.value = product.product.nutrition_grades;
-	if(nutriscore.value == 'a' || nutriscore.value == 'A'){
+	if (nutriscore.value == 'a' || nutriscore.value == 'A') {
 		nutriscore.src = 'img/nutriscore-a.svg';
 	}
-	if(nutriscore.value == 'b' || nutriscore.value == 'B'){
+	if (nutriscore.value == 'b' || nutriscore.value == 'B') {
 		nutriscore.src = 'img/nutriscore-b.svg';
 	}
-	if(nutriscore.value == 'c' || nutriscore.value == 'C'){
+	if (nutriscore.value == 'c' || nutriscore.value == 'C') {
 		nutriscore.src = 'img/nutriscore-c.svg';
 	}
-	if(nutriscore.value == 'd' || nutriscore.value == 'D'){
+	if (nutriscore.value == 'd' || nutriscore.value == 'D') {
 		nutriscore.src = 'img/nutriscore-d.svg';
 	}
-	if(nutriscore.value == 'e' || nutriscore.value == 'E'){
+	if (nutriscore.value == 'e' || nutriscore.value == 'E') {
 		nutriscore.src = 'img/nutriscore-e.svg';
 	}
 
@@ -50,7 +50,7 @@ function writeProductInfo(productsList, product){
 	let sodioValue = product.product.nutriments.sodium_100g;
 	sodioValue = sodioValue.toFixed(3);
 
-	if(product.status_verbose == "product found" && product.code != null){
+	if (product.status_verbose == "product found" && product.code != null) {
 		productsList.innerHTML = `
 		<h2>${product.product.product_name}</h2>
 		<ul class="gallery">
@@ -120,9 +120,9 @@ function writeProductInfo(productsList, product){
 					</tr>
 			</tbody>
 		</table>
-		`;		
+		`;
 	}
-	else{
+	else {
 		productsList.innerHTML = `
 			<h4 class="error"><strong>!</strong><br/><br/>¡Ups! No se ha encontrado el producto relacionado con este código de barras en nuestra base de datos. Prueba a reescribirlo o introducir otro.</h4>
 		`;
@@ -130,7 +130,7 @@ function writeProductInfo(productsList, product){
 
 }
 
-async function bringProductInfo(url , barCode){
+async function bringProductInfo(url, barCode) {
 	// Lo primero juntamos la url de la api con el código de barras introducido y la extensión .json
 	let urlWithBarCode = url + barCode + '.json';
 	// Con fetch hacemos una llamada a la api deseada
@@ -141,108 +141,108 @@ async function bringProductInfo(url , barCode){
 	//Vaciamos el contenido del elemento UL donde se va a pintar el contenido
 	clearList(productsList);
 	//Llamamos a la función que va a escribir la información recibida.
-	writeProductInfo(productsList , data);
+	writeProductInfo(productsList, data);
 }
 
 
-$(function() {
+$(function () {
 	// Create the QuaggaJS config object for the live stream
 	var liveStreamConfig = {
-			inputStream: {
-				type : "LiveStream",
-				constraints: {
-					aspectRatio: {min: 1, max: 100},
-					facingMode: "environment" // or "user" for the front camera
-				}
-			},
-			locator: {
-				patchSize: "medium",
-				halfSample: true
-			},
-			numOfWorkers: (navigator.hardwareConcurrency ? navigator.hardwareConcurrency : 4),
-			decoder: {
-				"readers":[
-					{"format":"ean_reader","config":{}}
-				]
-			},
-			locate: true
-		};
+		inputStream: {
+			type: "LiveStream",
+			constraints: {
+				aspectRatio: { min: 1, max: 100 },
+				facingMode: "environment" // or "user" for the front camera
+			}
+		},
+		locator: {
+			patchSize: "medium",
+			halfSample: true
+		},
+		numOfWorkers: (navigator.hardwareConcurrency ? navigator.hardwareConcurrency : 4),
+		decoder: {
+			"readers": [
+				{ "format": "ean_reader", "config": {} }
+			]
+		},
+		locate: true
+	};
 	// The fallback to the file API requires a different inputStream option. 
 	// The rest is the same 
 	var fileConfig = $.extend(
-			{}, 
-			liveStreamConfig,
-			{
-				inputStream: {
-					size: 800
-				}
+		{},
+		liveStreamConfig,
+		{
+			inputStream: {
+				size: 800
 			}
-		);
+		}
+	);
 	// Start the live stream scanner when the modal opens
 	$('#livestream_scanner').on('shown.bs.modal', function (e) {
 		Quagga.init(
-			liveStreamConfig, 
-			function(err) {
+			liveStreamConfig,
+			function (err) {
 				if (err) {
-					$('#livestream_scanner .modal-body .error').html('<div class="alert alert-danger"><strong><i class="fa fa-exclamation-triangle"></i> '+err.name+'</strong>: '+err.message+'</div>');
+					$('#livestream_scanner .modal-body .error').html('<div class="alert alert-danger"><strong><i class="fa fa-exclamation-triangle"></i> ' + err.name + '</strong>: ' + err.message + '</div>');
 					Quagga.stop();
 					return;
 				}
 				Quagga.start();
 			}
 		);
-    });
-	
+	});
+
 	// Make sure, QuaggaJS draws frames an lines around possible 
 	// barcodes on the live stream
-	Quagga.onProcessed(function(result) {
+	Quagga.onProcessed(function (result) {
 		var drawingCtx = Quagga.canvas.ctx.overlay,
 			drawingCanvas = Quagga.canvas.dom.overlay;
- 
+
 		if (result) {
 			if (result.boxes) {
 				drawingCtx.clearRect(0, 0, parseInt(drawingCanvas.getAttribute("width")), parseInt(drawingCanvas.getAttribute("height")));
 				result.boxes.filter(function (box) {
 					return box !== result.box;
 				}).forEach(function (box) {
-					Quagga.ImageDebug.drawPath(box, {x: 0, y: 1}, drawingCtx, {color: "green", lineWidth: 2});
+					Quagga.ImageDebug.drawPath(box, { x: 0, y: 1 }, drawingCtx, { color: "green", lineWidth: 2 });
 				});
 			}
- 
+
 			if (result.box) {
-				Quagga.ImageDebug.drawPath(result.box, {x: 0, y: 1}, drawingCtx, {color: "#00F", lineWidth: 2});
+				Quagga.ImageDebug.drawPath(result.box, { x: 0, y: 1 }, drawingCtx, { color: "#00F", lineWidth: 2 });
 			}
- 
+
 			if (result.codeResult && result.codeResult.code) {
-				Quagga.ImageDebug.drawPath(result.line, {x: 'x', y: 'y'}, drawingCtx, {color: 'red', lineWidth: 3});
+				Quagga.ImageDebug.drawPath(result.line, { x: 'x', y: 'y' }, drawingCtx, { color: 'red', lineWidth: 3 });
 			}
 		}
 	});
-	
+
 	// Once a barcode had been read successfully, stop quagga and 
 	// close the modal after a second to let the user notice where 
 	// the barcode had actually been found.
-	Quagga.onDetected(function(result) {    		
-		if (result.codeResult.code){
+	Quagga.onDetected(function (result) {
+		if (result.codeResult.code) {
 			$('#inputText').val(result.codeResult.code);
-			Quagga.stop();	
-			setTimeout(function(){ $('#livestream_scanner').modal('hide'); }, 1000);
-			document.getElementById('buttonSearch').click();	
+			Quagga.stop();
+			setTimeout(function () { $('#livestream_scanner').modal('hide'); }, 1000);
+			document.getElementById('buttonSearch').click();
 		}
 	});
-    
+
 	// Stop quagga in any case, when the modal is closed
-    $('#livestream_scanner').on('hide.bs.modal', function(){
-    	if (Quagga){
-    		Quagga.stop();	
-    	}
-    });
-	
+	$('#livestream_scanner').on('hide.bs.modal', function () {
+		if (Quagga) {
+			Quagga.stop();
+		}
+	});
+
 	// Call Quagga.decodeSingle() for every file selected in the 
 	// file input
-	$("#livestream_scanner input:file").on("change", function(e) {
+	$("#livestream_scanner input:file").on("change", function (e) {
 		if (e.target.files && e.target.files.length) {
-			Quagga.decodeSingle($.extend({}, fileConfig, {src: URL.createObjectURL(e.target.files[0])}), function(result) {alert(result.codeResult.code);});
+			Quagga.decodeSingle($.extend({}, fileConfig, { src: URL.createObjectURL(e.target.files[0]) }), function (result) { alert(result.codeResult.code); });
 		}
 	});
 });
