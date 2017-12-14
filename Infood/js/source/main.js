@@ -1,6 +1,7 @@
 let productsList = document.getElementById("productInfo");
 const url = 'https://world.openfoodfacts.org/api/v0/product/';
 
+
 function clearInput(inputItem){
 	inputItem.value = "";
 }
@@ -13,7 +14,6 @@ function searchBarCode(url){
 		let inputBarCode = document.getElementById("inputText");	
 		let inputValueSend = inputBarCode.value;
 		clearInput(inputBarCode);
-		//console.log(inputBarCode);
 		//Llamamos a la función buildLaunch y le pasamos los parametros que vamos a necesitar
 		bringProductInfo(url , inputValueSend);
 	});
@@ -27,54 +27,54 @@ function clearList(productsList){
 }
 
 function writeProductInfo(productsList, product){
-	//Cuando recibimos los datos generamos el HTML que mostraremos
+	// NUTRISCORE, A,B,C,D,E
+	const nutriscore ={};
+	nutriscore.value = product.product.nutrition_grades;
+	if(nutriscore.value == 'a' || nutriscore.value == 'A'){
+		nutriscore.src = 'img/nutriscore-a.svg';
+	}
+	if(nutriscore.value == 'b' || nutriscore.value == 'B'){
+		nutriscore.src = 'img/nutriscore-b.svg';
+	}
+	if(nutriscore.value == 'c' || nutriscore.value == 'C'){
+		nutriscore.src = 'img/nutriscore-c.svg';
+	}
+	if(nutriscore.value == 'd' || nutriscore.value == 'D'){
+		nutriscore.src = 'img/nutriscore-d.svg';
+	}
+	if(nutriscore.value == 'e' || nutriscore.value == 'E'){
+		nutriscore.src = 'img/nutriscore-e.svg';
+	}
 
-	// PARAMETRO SALUBRIDAD, A,B,C,D,E
-
-	/*const salubridad = {};
-	salubridad.valor = product.product.salubridad // A,B,C,D,E
-	if (salubridad.valor == 'A') salubridad.color = 'green';
-	if (salubridad.valor == 'B') salubridad.color = 'yellow';
-	if (salubridad.valor == 'C') salubridad.color = 'orange';
-	if (salubridad.valor == 'D') salubridad.color = 'red';
-	if (salubridad.valor == 'E') salubridad.color = 'black';
-	else {
-		salubridad.valor = 'Sin datos';
-		salubridad.color = 'grey';
-	}*/
-
-
-	/*<li><p style="background-color: ${salubridad.color}"><strong>Peso:</strong>${salubridad.valor}</p></li>*/
-
-
+	//Limitar los decimales del sodio
+	let sodioValue = product.product.nutriments.sodium_100g;
+	sodioValue = sodioValue.toFixed(3);
 
 	if(product.status_verbose == "product found" && product.code != null){
 		productsList.innerHTML = `
 		<h2>${product.product.product_name}</h2>
 		<ul class="gallery">
 			<li><img src="${product.product.image_url}"></p></li>
-			<li><img src="${product.product.image_nutrition_url}"></p></li>
 		</ul>	
 		<ul class="productProperties">
-			<li><p><strong>Marca:</strong>${product.product.brands}</p></li>
-			<li><p><strong>Nombre del producto:</strong>${product.product.product_name}</p></li>
-			<li><p><strong>Código de barras:</strong>${product.product.code}</p></li>
-			<li><p><strong>Categoria:</strong>${product.product.categories}</p></li>
-			<li><p><strong>País de procedencia:</strong>${product.product.countries}</p></li>
-			<li><p><strong>Ingredientes:</strong>${product.product.ingredients_text}</p></li>
-			<li><p><strong>Alergenos:</strong>${product.product.allergens}</p></li>
-			<li><p><strong>ingredientes 2:</strong>${product.product.ingredients_text_with_allergens}</p></li>
-			<li><p><strong>Nivel de grasa:</strong>${product.product.nutrient_levels.fat}</p></li>
-			<li><p><strong>Nivel de sal:</strong>${product.product.nutrient_levels.salt}</p></li>
-			<li><p><strong>Nivel de azúcares:</strong>${product.product.nutrient_levels.sugars}</p></li>
-			<li><p><strong>Grado Nutricional:</strong>${product.product.nutrition_grades}</p></li>
-			<li><p><strong>Posibles trazas de:</strong>${product.product.traces}</p></li>
-			<li><p><strong>Última actualización:</strong>${product.product.last_edit_dates_tags[2]}</p></li>
-			<li><p><strong>Envase:</strong>${product.product.packaging}</p></li>
-			<li><p><strong>Peso:</strong>${product.product.quantity}</p></li>
-			<li><p><strong>Lugar de fabricación:</strong>${product.product.manufacturing_places}</p></li>
+			<li><p><strong>Marca:</strong><span>${product.product.brands}</span></p></li>
+			<li><p><strong>Nombre del producto:</strong><span>${product.product.product_name}</span></p></li>
+			<li><p><strong>Código de barras:</strong><span>${product.product.code}</span></p></li>
+			<li><p><strong>Categoria:</strong><span>${product.product.categories}</span></p></li>
+			<li><p><strong>País de procedencia:</strong><span>${product.product.countries}</span></p></li>
+			<li><p><strong>Ingredientes:</strong><span>${product.product.ingredients_text}</span></p></li>
+			<li><p><strong>Alérgenos:</strong><span>${product.product.allergens}</span></p></li>
+			<li><p><strong>Nivel de grasa:</strong><span>${product.product.nutrient_levels.fat}</span></p></li>
+			<li><p><strong>Nivel de sal:</strong><span>${product.product.nutrient_levels.salt}</span></p></li>
+			<li><p><strong>Nivel de azúcares:</strong><span>${product.product.nutrient_levels.sugars}</span></p></li>
+			<li><p><strong>Posibles trazas de:</strong><span>${product.product.traces}</span></p></li>
+			<li><p><strong>Última actualización:</strong><span>${product.product.last_edit_dates_tags[2]}</span></p></li>
+			<li><p><strong>Envase:</strong><span>${product.product.packaging}</span></p></li>
+			<li><p><strong>Peso:</strong><span>${product.product.quantity}</span></p></li>
+			<li><p><strong>Lugar de fabricación:</strong><span>${product.product.manufacturing_places}</span></p></li>
+			<li><p><strong>Nutriscore:</strong><span><img src="${nutriscore.src}" alt="${product.product.brands}"></span></p></li>
 		</ul>		
-		<table class="table table-striped table-bordered">
+		<table class="table table-bordered">
 			<thead>
 				<tr>
 					<th>Valor Nutricional</th>
@@ -112,7 +112,7 @@ function writeProductInfo(productsList, product){
 					</tr>
 					<tr>
 						<td>Sodio</td>
-						<td>${product.product.nutriments.sodium_100g}</td>
+						<td>${sodioValue}</td>
 					</tr>
 					<tr>
 						<td>Azucares</td>
