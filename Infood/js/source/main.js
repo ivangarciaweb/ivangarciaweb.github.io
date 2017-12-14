@@ -57,22 +57,22 @@ function writeProductInfo(productsList, product) {
 			<li><img src="${product.product.image_url}"></p></li>
 		</ul>	
 		<ul class="productProperties">
-			<li><p><strong>Marca:</strong><span>${product.product.brands}</span></p></li>
-			<li><p><strong>Nombre del producto:</strong><span>${product.product.product_name}</span></p></li>
-			<li><p><strong>Código de barras:</strong><span>${product.product.code}</span></p></li>
-			<li><p><strong>Categoria:</strong><span>${product.product.categories}</span></p></li>
-			<li><p><strong>País de procedencia:</strong><span>${product.product.countries}</span></p></li>
-			<li><p><strong>Ingredientes:</strong><span>${product.product.ingredients_text}</span></p></li>
-			<li><p><strong>Alérgenos:</strong><span>${product.product.allergens}</span></p></li>
-			<li><p><strong>Nivel de grasa:</strong><span>${product.product.nutrient_levels.fat}</span></p></li>
-			<li><p><strong>Nivel de sal:</strong><span>${product.product.nutrient_levels.salt}</span></p></li>
-			<li><p><strong>Nivel de azúcares:</strong><span>${product.product.nutrient_levels.sugars}</span></p></li>
-			<li><p><strong>Posibles trazas de:</strong><span>${product.product.traces}</span></p></li>
-			<li><p><strong>Última actualización:</strong><span>${product.product.last_edit_dates_tags[2]}</span></p></li>
-			<li><p><strong>Envase:</strong><span>${product.product.packaging}</span></p></li>
-			<li><p><strong>Peso:</strong><span>${product.product.quantity}</span></p></li>
-			<li><p><strong>Lugar de fabricación:</strong><span>${product.product.manufacturing_places}</span></p></li>
-			<li><p><strong>Nutriscore:</strong><span><img src="${nutriscore.src}" alt="${product.product.brands}"></span></p></li>
+			<li><p><span class="title">Marca:</span><span class="description">${product.product.brands}</span></p></li>
+			<li><p><span class="title">Nombre del producto:</span><span class="description">${product.product.product_name}</span></p></li>
+			<li><p><span class="title">Código de barras:</span><span class="description">${product.product.code}</span></p></li>
+			<li><p><span class="title">Categoria:</span><span class="description">${product.product.categories}</span></p></li>
+			<li><p><span class="title">País de procedencia:</span><span class="description">${product.product.countries}</span></p></li>
+			<li><p><span class="title">Ingredientes:</span><span class="description">${product.product.ingredients_text}</span></p></li>
+			<li><p><span class="title">Alérgenos:</span><span class="description">${product.product.allergens}</span></p></li>
+			<li><p><span class="title">Nivel de grasa:</span><span class="description">${product.product.nutrient_levels.fat}</span></p></li>
+			<li><p><span class="title">Nivel de sal:</span><span class="description">${product.product.nutrient_levels.salt}</span></p></li>
+			<li><p><span class="title">Nivel de azúcares:</span><span class="description">${product.product.nutrient_levels.sugars}</span></p></li>
+			<li><p><span class="title">Posibles trazas de:</span><span class="description">${product.product.traces}</span></p></li>
+			<li><p><span class="title">Última actualización:</span><span class="description">${product.product.last_edit_dates_tags[2]}</span></p></li>
+			<li><p><span class="title">Envase:</span><span class="description">${product.product.packaging}</span></p></li>
+			<li><p><span class="title">Peso:</span><span class="description">${product.product.quantity}</span></p></li>
+			<li><p><span class="title">Lugar de fabricación:</span><span class="description">${product.product.manufacturing_places}</span></p></li>
+			<li><p><span class="title">Nutriscore:</span><span class="description"><img src="${nutriscore.src}" alt="${product.product.brands}"></span></p></li>
 		</ul>		
 		<table class="table table-bordered">
 			<thead>
@@ -124,7 +124,7 @@ function writeProductInfo(productsList, product) {
 	}
 	else {
 		productsList.innerHTML = `
-			<h4 class="error"><strong>!</strong><br/><br/>¡Ups! No se ha encontrado el producto relacionado con este código de barras en nuestra base de datos. Prueba a reescribirlo o introducir otro.</h4>
+			<h4 class="error"><span class="title">!</span><br/><br/>¡Ups! No se ha encontrado el producto relacionado con este código de barras en nuestra base de datos. Prueba a reescribirlo o introducir otro.</h4>
 		`;
 	}
 
@@ -184,7 +184,7 @@ $(function () {
 			liveStreamConfig,
 			function (err) {
 				if (err) {
-					$('#livestream_scanner .modal-body .error').html('<div class="alert alert-danger"><strong><i class="fa fa-exclamation-triangle"></i> ' + err.name + '</strong>: ' + err.message + '</div>');
+					$('#livestream_scanner .modal-body .error').html('<div class="alert alert-danger"><span class="title"><i class="fa fa-exclamation-triangle"></i> ' + err.name + '</span>: ' + err.message + '</div>');
 					Quagga.stop();
 					return;
 				}
