@@ -3257,7 +3257,7 @@ body {
 .main-logo img {
   display: block;
   margin: 0 auto;
-  width: 40%;
+  width: 70%;
 }
 
 .text-intro {
@@ -3291,7 +3291,7 @@ body {
   margin: 15px auto;
   padding: 15px;
   text-transform: uppercase;
-  background: #006df0;
+  background: #86b129;
   color: #ffffff;
   font-size: 12px;
   letter-spacing: 3px;
@@ -3333,7 +3333,7 @@ header .logo h1 {
   letter-spacing: 2px;
   margin: 0;
   display: inline-block;
-  color: #006df0;
+  color: #86b129;
   vertical-align: middle;
   padding-right: 15px;
 }
@@ -3354,7 +3354,7 @@ header .logo img {
   padding: 10px 15px;
   border: none;
   background: rgba(255, 255, 255, 0.8);
-  color: #006df0;
+  color: #86b129;
   font-size: 16px;
   font-style: italic;
   letter-spacing: 1px;
@@ -3365,7 +3365,7 @@ header .logo img {
   margin: 0 auto;
   padding: 15px;
   text-transform: uppercase;
-  background: #006df0;
+  background: #86b129;
   color: #ffffff;
   font-size: 12px;
   letter-spacing: 3px;
@@ -3384,8 +3384,8 @@ header .logo img {
 }
 
 .block-info-box #productInfo {
-  width: 90%;
-  background: rgba(255, 255, 255, 0.65);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
   display: block;
   margin: 0 auto;
   padding: 10px 20px;
@@ -3463,14 +3463,27 @@ header .logo img {
 
 .block-info-box #productInfo .productProperties li p {
   font-size: 16px;
-  font-style: italic;
   word-break: break-all;
+  border: 1px solid #dcdcdc;
 }
 
-.block-info-box #productInfo .productProperties li p strong {
-  margin-right: 8px;
-  font-size: 18px;
-  font-style: normal;
+.block-info-box #productInfo .productProperties li p .title {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  background: #dcdcdc;
+  padding: 5px 10px;
+}
+
+.block-info-box #productInfo .productProperties li p .description {
+  font-size: 16px;
+  display: block;
+  padding: 5px 10px;
+}
+
+.block-info-box #productInfo .productProperties li img {
+  margin: 3vh auto;
+  display: block;
 }
 
 .block-info-box #productInfo .productNutritionalValue {
@@ -3503,7 +3516,7 @@ header .logo img {
 
 .block-info-box #productInfo .productNutritionalValue li p strong {
   margin-right: 8px;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   display: block;
 }
@@ -3564,7 +3577,7 @@ header .logo img {
   width: 90%;
   padding: 10px;
   text-transform: uppercase;
-  background: #4285f4;
+  background: #86b129;
   color: #ffffff;
   font-size: 12px;
   letter-spacing: 1px;
