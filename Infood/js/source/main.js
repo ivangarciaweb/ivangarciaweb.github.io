@@ -10,7 +10,6 @@ function searchBarCode(url) {
 	let searchClick = document.getElementById("buttonSearch");
 	// Escuchamos el evento del botón buscar
 	searchClick.addEventListener("click", function () {
-		alert('estoy llegando al click');
 		let inputBarCode = document.getElementById("inputText");
 		let inputValueSend = inputBarCode.value;
 		clearInput(inputBarCode);
@@ -27,30 +26,32 @@ function clearList(productsList) {
 }
 
 function writeProductInfo(productsList, product) {
-	// NUTRISCORE, A,B,C,D,E
-	const nutriscore = {};
-	nutriscore.value = product.product.nutrition_grades;
-	if (nutriscore.value == 'a' || nutriscore.value == 'A') {
-		nutriscore.src = 'img/nutriscore-a.svg';
-	}
-	if (nutriscore.value == 'b' || nutriscore.value == 'B') {
-		nutriscore.src = 'img/nutriscore-b.svg';
-	}
-	if (nutriscore.value == 'c' || nutriscore.value == 'C') {
-		nutriscore.src = 'img/nutriscore-c.svg';
-	}
-	if (nutriscore.value == 'd' || nutriscore.value == 'D') {
-		nutriscore.src = 'img/nutriscore-d.svg';
-	}
-	if (nutriscore.value == 'e' || nutriscore.value == 'E') {
-		nutriscore.src = 'img/nutriscore-e.svg';
-	}
-
-	//Limitar los decimales del sodio
-	let sodioValue = product.product.nutriments.sodium_100g;
-	sodioValue = sodioValue.toFixed(3);
-
 	if (product.status_verbose == "product found" && product.code != null) {
+		// NUTRISCORE, A,B,C,D,E
+		const nutriscore = {};
+		nutriscore.value = product.product.nutrition_grades;
+		if (nutriscore.value == 'a' || nutriscore.value == 'A') {
+			nutriscore.src = 'img/nutriscore-a.svg';
+		}
+		if (nutriscore.value == 'b' || nutriscore.value == 'B') {
+			nutriscore.src = 'img/nutriscore-b.svg';
+		}
+		if (nutriscore.value == 'c' || nutriscore.value == 'C') {
+			nutriscore.src = 'img/nutriscore-c.svg';
+		}
+		if (nutriscore.value == 'd' || nutriscore.value == 'D') {
+			nutriscore.src = 'img/nutriscore-d.svg';
+		}
+		if (nutriscore.value == 'e' || nutriscore.value == 'E') {
+			nutriscore.src = 'img/nutriscore-e.svg';
+		}
+
+		//Limitar los decimales del sodio
+		let sodioValue = product.product.nutriments.sodium_100g;
+		if (typeof sodioValue != "undefined"){
+			sodioValue = sodioValue.toFixed(3);
+		}
+
 		productsList.innerHTML = `
 		<h2>${product.product.product_name}</h2>
 		<ul class="gallery">
