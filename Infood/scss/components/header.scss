@@ -13,13 +13,14 @@ header{
             display: inline-block;
             color: #86b129;
             vertical-align: middle;
-            padding-right: 15px;
+            padding: 5px 0;
+            img {
+                display: inline-block;
+                letter-spacing: 1px;
+                width: 50%;
+            }            
         }
-        img {
-            display: inline-block;
-            letter-spacing: 1px;
-            width: 42px;
-        }
+
     }
 }
 

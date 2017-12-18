@@ -3256,8 +3256,8 @@ body {
 
 .main-logo img {
   display: block;
-  margin: 0 auto;
-  width: 70%;
+  margin: 3vh auto;
+  width: 90%;
 }
 
 .text-intro {
@@ -3335,13 +3335,13 @@ header .logo h1 {
   display: inline-block;
   color: #86b129;
   vertical-align: middle;
-  padding-right: 15px;
+  padding: 5px 0;
 }
 
-header .logo img {
+header .logo h1 img {
   display: inline-block;
   letter-spacing: 1px;
-  width: 42px;
+  width: 50%;
 }
 
 .block-input-search .input {
