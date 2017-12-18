@@ -10,7 +10,7 @@ function searchBarCode(url) {
 	let searchClick = document.getElementById("buttonSearch");
 	// Escuchamos el evento del botón buscar
 	searchClick.addEventListener("click", function () {
-		//Almacenamos en una variable el contenido en texto del elemento donde hemos hecho click
+		alert('estoy llegando al click');
 		let inputBarCode = document.getElementById("inputText");
 		let inputValueSend = inputBarCode.value;
 		clearInput(inputBarCode);
