@@ -59,7 +59,7 @@ main{
 
   /**Buttons**/
 
-.btn-open-modal {
+.btn-open-modal{
     margin: 0 auto;
     padding: 15px;
     text-transform: uppercase;
@@ -78,6 +78,30 @@ main{
         display: block;
         margin-bottom: 10px;
     }
+    span {
+        display: block;
+        font-size: 12px;
+    }
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited{
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+.btn-default {
+    margin: 15px auto;
+    padding: 15px;
+    text-transform: uppercase;
+    background: #86b129;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border: none;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
     span {
         display: block;
         font-size: 12px;
