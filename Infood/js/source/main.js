@@ -52,6 +52,8 @@ function writeProductInfo(productsList, product) {
 			sodioValue = sodioValue.toFixed(3);
 		}
 
+		let modalEnterBarcode = document.getElementById("modalEnterBarcode");
+
 		productsList.innerHTML = `
 		<h2>${product.product.product_name}</h2>
 		<ul class="gallery">
@@ -122,6 +124,7 @@ function writeProductInfo(productsList, product) {
 			</tbody>
 		</table>
 		`;
+		
 	}
 	else {
 		productsList.innerHTML = `

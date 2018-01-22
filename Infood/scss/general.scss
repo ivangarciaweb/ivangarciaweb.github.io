@@ -13,6 +13,14 @@ body{
   font-family: 'Montserrat-Regular';
 }
 
+main{
+    height: 100%;
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(125,185,232,0) 80%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(125,185,232,0) 80%);
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(125,185,232,0) 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007db9e8',GradientType=0 );
+}
+
 .main-logo{
     color: #ffffff;
     span{
@@ -49,10 +57,10 @@ body{
     }
   }
 
-  /**Button barcode**/
+  /**Buttons**/
 
-.btn-barcode {
-    margin: 15px auto;
+.btn-open-modal {
+    margin: 0 auto;
     padding: 15px;
     text-transform: uppercase;
     background: #86b129;
@@ -62,6 +70,9 @@ body{
     border: none;
     outline: none;
     width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 19px rgba(0,0,0,0.3);
+    cursor: pointer;
     i {
         font-size: 50px;
         display: block;
@@ -78,6 +89,13 @@ body{
         color: #ffffff;
         text-decoration: none;
     }
+}
+
+.btn-menu{
+    background: none;
+    color: #000000;
+    border: none;
+    font-size: 28px;
 }
 
 @media (min-width:768px) {

@@ -1,11 +1,19 @@
 .block-info-box{
+    margin-top: 15vh;
     #productInfo {
-        width: 100%;
+        width: 95%;
         background: rgba(255,255,255,0.90);
         display: block;
         margin: 0 auto;
-        padding: 10px 20px;
+        padding: 30px 20px;
         position: relative;
+        i{
+            display: block;
+            margin: 0 auto 25px;
+            color: #000000;
+            font-size: 70px;
+            text-align: center;
+        }
         h4 {
             text-align: center;
             position: relative;
@@ -29,11 +37,11 @@
             letter-spacing: 1px;
             height: 90%;
             border-radius: 65px;
-            strong {
-            border: 4px solid #fff;
-            padding: 15px 29px;
-            border-radius: 50%;
-            font-size: 30px;
+            span {
+                border: 4px solid #fff;
+                padding: 15px 29px;
+                border-radius: 50%;
+                font-size: 30px;
             }
         }
         h2 {

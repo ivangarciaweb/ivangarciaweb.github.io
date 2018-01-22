@@ -3245,6 +3245,12 @@ body {
   font-family: 'Montserrat-Regular';
 }
 
+main {
+  height: 100%;
+  background: linear-gradient(to bottom, black 0%, rgba(125, 185, 232, 0) 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007db9e8',GradientType=0 );
+}
+
 .main-logo {
   color: #ffffff;
 }
@@ -3285,10 +3291,10 @@ body {
   width: 90%;
 }
 
-/**Button barcode**/
+/**Buttons**/
 
-.btn-barcode {
-  margin: 15px auto;
+.btn-open-modal {
+  margin: 0 auto;
   padding: 15px;
   text-transform: uppercase;
   background: #86b129;
@@ -3298,28 +3304,54 @@ body {
   border: none;
   outline: none;
   width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 19px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
-.btn-barcode i {
+.btn-open-modal i {
   font-size: 50px;
   display: block;
   margin-bottom: 10px;
 }
 
-.btn-barcode span {
+.btn-open-modal span {
   display: block;
   font-size: 12px;
 }
 
-.btn-barcode:hover,
-.btn-barcode:active,
-.btn-barcode:focus,
-.btn-barcode:visited {
+.btn-open-modal:hover,
+.btn-open-modal:active,
+.btn-open-modal:focus,
+.btn-open-modal:visited {
   color: #ffffff;
   text-decoration: none;
 }
 
-header .logo {
+.btn-menu {
+  background: none;
+  color: #000000;
+  border: none;
+  font-size: 28px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+header .header-wrap {
+  position: relative;
+}
+
+header .header-wrap .btn-menu {
+  position: absolute;
+  left: 10px;
+  padding: 10px 2%;
+}
+
+header .header-wrap .logo {
   width: 100%;
   padding: 10px 2%;
   text-align: center;
@@ -3327,7 +3359,7 @@ header .logo {
   background: #ffffff;
 }
 
-header .logo h1 {
+header .header-wrap .logo h1 {
   font-weight: bold;
   font-size: 24px;
   letter-spacing: 2px;
@@ -3338,58 +3370,66 @@ header .logo h1 {
   padding: 5px 0;
 }
 
-header .logo h1 img {
+header .header-wrap .logo h1 img {
   display: inline-block;
   letter-spacing: 1px;
   width: 50%;
 }
 
-.block-input-search .input {
-  padding: 0 0 0px;
+.block-input-search {
+  padding: 80px 0 0px;
+}
+
+.block-input-search ul {
+  width: 95%;
+  padding: 0;
+  margin: 0 2.5%;
+}
+
+.block-input-search ul li {
+  display: inline-block;
+  width: 43%;
+  margin: 0 6.4%;
+  vertical-align: top;
+}
+
+.block-input-search ul li:first-child {
+  margin-left: 0;
+}
+
+.block-input-search ul li:last-child {
+  margin-right: 0;
+}
+
+.block-input-search ul .input {
+  padding: 0;
   text-align: center;
 }
 
-.block-input-search .input #inputText {
-  width: 100%;
-  padding: 10px 15px;
-  border: none;
-  background: rgba(255, 255, 255, 0.8);
-  color: #86b129;
-  font-size: 16px;
-  font-style: italic;
-  letter-spacing: 1px;
-  outline: none;
+.block-input-search ul .input .btn-search i {
+  font-size: 44px;
+  margin-bottom: 16px;
 }
 
-.block-input-search .input #buttonSearch {
-  margin: 0 auto;
-  padding: 15px;
-  text-transform: uppercase;
-  background: #86b129;
-  color: #ffffff;
-  font-size: 12px;
-  letter-spacing: 3px;
-  border: none;
-  outline: none;
-  width: 100%;
-}
-
-.block-input-search .input #buttonSearch i {
-  vertical-align: sub;
-  font-size: 18px;
-}
-
-.block-input-search .input #buttonSearch span {
-  font-size: 12px;
+.block-info-box {
+  margin-top: 15vh;
 }
 
 .block-info-box #productInfo {
-  width: 100%;
+  width: 95%;
   background: rgba(255, 255, 255, 0.9);
   display: block;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 30px 20px;
   position: relative;
+}
+
+.block-info-box #productInfo i {
+  display: block;
+  margin: 0 auto 25px;
+  color: #000000;
+  font-size: 70px;
+  text-align: center;
 }
 
 .block-info-box #productInfo h4 {
@@ -3418,7 +3458,7 @@ header .logo h1 img {
   border-radius: 65px;
 }
 
-.block-info-box #productInfo .error strong {
+.block-info-box #productInfo .error span {
   border: 4px solid #fff;
   padding: 15px 29px;
   border-radius: 50%;
@@ -3609,6 +3649,70 @@ header .logo h1 img {
   top: 0;
   bottom: 0;
   margin: auto;
+}
+
+.block-modal-enterCode .modal-dialog {
+  margin: 17% 2.5%;
+}
+
+.block-modal-enterCode .modal-dialog .modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+.block-modal-enterCode .modal-dialog .modal-content .modal-header {
+  background: #86b129;
+  color: #fff;
+  text-align: center;
+  padding: 6px;
+}
+
+.block-modal-enterCode .modal-dialog .modal-content .modal-header .close {
+  color: #ffffff;
+  opacity: 1;
+  margin-top: -7px;
+}
+
+.block-modal-enterCode .modal-dialog .modal-content .modal-header .close i {
+  font-size: 12px;
+}
+
+.block-modal-enterCode .modal-dialog .modal-content .modal-body {
+  padding: 40px 20px;
+}
+
+.block-modal-enterCode .modal-dialog .modal-content .modal-body #inputText {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  background: #eeeeee;
+  color: #86b129;
+  font-size: 16px;
+  font-style: italic;
+  letter-spacing: 1px;
+  outline: none;
+}
+
+.block-modal-enterCode .modal-dialog .modal-content .modal-body #buttonSearch {
+  margin: 0 auto;
+  padding: 15px;
+  text-transform: uppercase;
+  background: #86b129;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 3px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.block-modal-enterCode .modal-dialog .modal-content .modal-body #buttonSearch i {
+  vertical-align: sub;
+  font-size: 18px;
+}
+
+.block-modal-enterCode .modal-dialog .modal-content .modal-body #buttonSearch span {
+  font-size: 12px;
 }
 
 @media (min-width: 768px) {

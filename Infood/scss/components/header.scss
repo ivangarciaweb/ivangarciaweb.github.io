@@ -1,27 +1,38 @@
 header{
-    .logo {
-        width: 100%;
-        padding: 10px 2%;
-        text-align: center;
-        color: #ffffff;
-        background: #ffffff;
-        h1 {
-            font-weight: bold;
-            font-size: 24px;
-            letter-spacing: 2px;
-            margin: 0;
-            display: inline-block;
-            color: #86b129;
-            vertical-align: middle;
-            padding: 5px 0;
-            img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .header-wrap{
+        position: relative;
+        .btn-menu{
+            position: absolute;
+            left: 10px;
+            padding: 10px 2%;
+        }        
+        .logo {
+            width: 100%;
+            padding: 10px 2%;
+            text-align: center;
+            color: #ffffff;
+            background: #ffffff;
+            h1 {
+                font-weight: bold;
+                font-size: 24px;
+                letter-spacing: 2px;
+                margin: 0;
                 display: inline-block;
-                letter-spacing: 1px;
-                width: 50%;
-            }            
-        }
-
+                color: #86b129;
+                vertical-align: middle;
+                padding: 5px 0;
+                img {
+                    display: inline-block;
+                    letter-spacing: 1px;
+                    width: 50%;
+                }            
+            }
+        }        
     }
+
 }
 
 

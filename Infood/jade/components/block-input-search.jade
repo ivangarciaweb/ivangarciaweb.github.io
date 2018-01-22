@@ -1,14 +1,11 @@
 .block-input-search
     .row
-        .col-xs-12.text-center.mT60
-            .input
-                input#inputText(type='number', placeholder='Introduce el código de barras de un producto cualquiera...')
-                button#buttonSearch
+        ul
+            li.input
+                button.btn-open-modal.btn-search(data-toggle='modal', data-target='#modalEnterBarcode')
                     i.icon-search
-                    span Buscar
-            .input-group
-                span.input-group-btn
-                    button.btn-barcode(type='button', data-toggle='modal', data-target='#livestream_scanner')
-                        i.icon-barcode
-                        span Escanear código
-        
+                    span Teclear código
+            li.input-scanner
+                button.btn-open-modal(type='button', data-toggle='modal', data-target='#livestream_scanner')
+                    i.icon-barcode
+                    span Escanear código

@@ -1,0 +1,14 @@
+
+// Modal para introducción del código de barras a buscar
+#modalEnterBarcode.modal.block-modal-enterCode.fade(role='dialog')
+    .modal-dialog
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal')
+                    i.icon-cross
+                h4 Introduzca el código de barras
+            .modal-body
+                input#inputText(type='number', placeholder='Escribe el código de barras')
+                button#buttonSearch
+                    i.icon-search
+                    span Buscar código

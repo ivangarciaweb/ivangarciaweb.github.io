@@ -30,28 +30,46 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <h1> <img src="img/logo_infood_black.svg"></h1>
+      <div class="header-wrap">
+        <button class="btn-menu js-menu-open"><i class="icon-menu"></i></button>
+        <div class="logo">
+          <h1> <img src="img/logo_infood_black.svg"></h1>
+        </div>
       </div>
     </header>
     <main role="main">
       <div class="container">
-        <div class="block-input-search">
+        <div class="block-info-box">
           <div class="row">
-            <div class="col-xs-12 text-center mT60">
-              <div class="input">
-                <input id="inputText" type="number" placeholder="Introduce el código de barras de un producto cualquiera...">
-                <button id="buttonSearch"><i class="icon-search"></i><span>Buscar</span></button>
-              </div>
-              <div class="input-group"><span class="input-group-btn">
-                  <button type="button" data-toggle="modal" data-target="#livestream_scanner" class="btn-barcode"><i class="icon-barcode"></i><span>Escanear código</span></button></span></div>
+            <div id="productInfo"><i class="icon-wink"></i>
+              <h4>Para poder comenzar selecciona una de las siguientes opciones</h4>
             </div>
           </div>
         </div>
-        <div class="block-info-box">
+        <div class="block-input-search">
           <div class="row">
-            <div id="productInfo">
-              <h4>Aún no has escrito ningún código de barras</h4>
+            <ul>
+              <li class="input">
+                <button data-toggle="modal" data-target="#modalEnterBarcode" class="btn-open-modal btn-search"><i class="icon-search"></i><span>Teclear código</span></button>
+              </li>
+              <li class="input-scanner">
+                <button type="button" data-toggle="modal" data-target="#livestream_scanner" class="btn-open-modal"><i class="icon-barcode"></i><span>Escanear código</span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Modal para introducción del código de barras a buscar-->
+        <div id="modalEnterBarcode" role="dialog" class="modal block-modal-enterCode fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" data-dismiss="modal" class="close"><i class="icon-cross"></i></button>
+                <h4>Introduzca el código de barras</h4>
+              </div>
+              <div class="modal-body">
+                <input id="inputText" type="number" placeholder="Escribe el código de barras">
+                <button id="buttonSearch"><i class="icon-search"></i><span>Buscar código</span></button>
+              </div>
             </div>
           </div>
         </div>
