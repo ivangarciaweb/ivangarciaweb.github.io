@@ -1,0 +1,33 @@
+.profile{
+    .wrap-img{
+        background: #eeeeee;
+        border-radius: 50%;
+        padding: 30px;
+        width: 80%;
+        margin: 30px auto 0;
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    h3{
+        text-align: center;
+        font:{
+            size: 18px;
+            weight: bold;
+        }
+    }
+}
+
+
+@media(min-width:768px){
+
+}
+
+@media(min-width:992px){
+    
+}
+
+@media(min-width:1200px){
+    
+}

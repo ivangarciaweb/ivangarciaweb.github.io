@@ -150,6 +150,15 @@ async function bringProductInfo(url, barCode) {
 
 
 $(function () {
+	const openMenu = document.getElementById("js-menu-open");
+	const closeMenu = document.getElementById("js-close-menu");
+	const menuLeft = document.getElementById("menuLeft"); 
+	openMenu.addEventListener("click", function () {
+		menuLeft.style.left = "0px";
+	});
+	closeMenu.addEventListener("click", function () {
+		menuLeft.style.left = "-100%";
+	});
 	// Create the QuaggaJS config object for the live stream
 	var liveStreamConfig = {
 		inputStream: {
