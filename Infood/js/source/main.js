@@ -5,17 +5,20 @@ const url = 'https://world.openfoodfacts.org/api/v0/product/';
 function clearInput(inputItem) {
 	inputItem.value = "";
 }
+
 function searchBarCode(url) {
 	//Creo la variable que almacenara los elementos donde estaré escuchando el click
 	let searchClick = document.getElementById("buttonSearch");
-	// Escuchamos el evento del botón buscar
-	searchClick.addEventListener("click", function () {
-		let inputBarCode = document.getElementById("inputText");
-		let inputValueSend = inputBarCode.value;
-		clearInput(inputBarCode);
-		//Llamamos a la función buildLaunch y le pasamos los parametros que vamos a necesitar
-		bringProductInfo(url, inputValueSend);
-	});
+	if(searchClick != undefined){
+		// Escuchamos el evento del botón buscar
+		searchClick.addEventListener("click", function () {
+			let inputBarCode = document.getElementById("inputText");
+			let inputValueSend = inputBarCode.value;
+			clearInput(inputBarCode);
+			//Llamamos a la función buildLaunch y le pasamos los parametros que vamos a necesitar
+			bringProductInfo(url, inputValueSend);
+		});	
+	}
 }
 
 searchBarCode(url)

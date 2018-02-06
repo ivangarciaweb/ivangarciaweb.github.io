@@ -105,6 +105,14 @@
   content: "\ea07";
 }
 
+.icon-star:before {
+  content: "\e905";
+}
+
+.icon-eye:before {
+  content: "\e906";
+}
+
 /******     Bootstrap   ******
 @media (min-width:768px){***/
 
@@ -1323,6 +1331,13 @@ main {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007db9e8',GradientType=0 );
 }
 
+/***Sections***/
+
+.wrapper-list {
+  background: rgba(255, 255, 255, 0.8);
+  padding-bottom: 10px;
+}
+
 .main-logo {
   color: #ffffff;
 }
@@ -1431,7 +1446,7 @@ main {
   background: none;
   color: #000000;
   border: none;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .btn-close {
@@ -1439,10 +1454,11 @@ main {
   color: #000000;
   border: none;
   font-size: 18px;
+  outline: none;
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -1454,13 +1470,13 @@ header .header-wrap {
 header .header-wrap .btn-menu {
   position: absolute;
   left: 10px;
-  padding: 10px 2%;
+  padding: 8px 2%;
   outline: none;
 }
 
 header .header-wrap .logo {
   width: 100%;
-  padding: 10px 2%;
+  padding: 5px 2%;
   text-align: center;
   color: #ffffff;
   background: #ffffff;
@@ -1480,7 +1496,7 @@ header .header-wrap .logo h1 {
 header .header-wrap .logo h1 img {
   display: inline-block;
   letter-spacing: 1px;
-  width: 50%;
+  width: 45%;
 }
 
 .left-menu {
@@ -1897,6 +1913,71 @@ header .header-wrap .logo h1 img {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
+}
+
+.list-item {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 12px 8px;
+  border-bottom: 1px solid #dadada;
+  margin: 2px 5px;
+}
+
+.list-item img {
+  display: inline-block;
+  width: 20%;
+}
+
+.list-item .wrap-text {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10px;
+  overflow: hidden;
+  width: 71%;
+}
+
+.list-item .wrap-text p {
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  margin-bottom: -2px;
+}
+
+.list-item .wrap-text span {
+  margin: 0;
+  padding: 0;
+  color: #bdbcbc;
+  font-size: 10px;
+}
+
+.list-item i {
+  color: #86b129;
+  font-size: 22px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.heading-list {
+  padding: 55px 0 15px;
+}
+
+.heading-list img {
+  display: block;
+  width: 35%;
+  margin: 20px auto 10px;
+}
+
+.heading-list h3 {
+  text-align: center;
+  color: #86b129;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.heading-list p {
+  text-align: center;
+  padding: 0 10px;
+  margin: 0;
 }
 
 @media (min-width: 768px) {

@@ -1,0 +1,49 @@
+.list-item{
+    background: rgba(255,255,255,0.7);
+    padding: 12px 8px;
+    border-bottom: 1px solid #dadada;
+    margin: 2px 5px;
+    img{
+        display: inline-block;
+        width: 20%;
+    }
+    .wrap-text{
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 10px;
+        overflow: hidden;
+        width: 71%;
+        p{
+            color: $black;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            margin-bottom: -2px;
+        }
+        span{
+            margin: 0;
+            padding: 0;
+            color: #bdbcbc;
+            font-size: 10px;
+        }
+    }
+    i{
+        color: #86b129;
+        font-size: 22px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+@media(min-width:768px){
+
+}
+
+@media(min-width:992px){
+    
+}
+
+@media(min-width:1200px){
+    
+}
