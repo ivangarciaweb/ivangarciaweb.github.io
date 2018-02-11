@@ -113,6 +113,38 @@
   content: "\e906";
 }
 
+.icon-edit:before {
+  content: "\e907";
+}
+
+.icon-home:before {
+  content: "\e908";
+}
+
+.icon-history:before {
+  content: "\e909";
+}
+
+.icon-favorite-menu:before {
+  content: "\e90a";
+}
+
+.icon-category:before {
+  content: "\e90b";
+}
+
+.icon-contact:before {
+  content: "\e90c";
+}
+
+.icon-bread:before {
+  content: "\e90d";
+}
+
+.icon-gluten-free:before {
+  content: "\e90e";
+}
+
 /******     Bootstrap   ******
 @media (min-width:768px){***/
 
@@ -1461,6 +1493,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9;
 }
 
 header .header-wrap {
@@ -1537,12 +1570,22 @@ header .header-wrap .logo h1 img {
 }
 
 .left-menu nav ul li a {
+  position: relative;
   color: #000000;
+  padding-left: 28px;
 }
 
 .left-menu nav ul li a:hover {
   text-decoration: none;
   color: #86b129;
+}
+
+.left-menu nav ul li a i {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  color: #86b129;
+  font-size: 18px;
 }
 
 .left-menu .wrap-logo {
@@ -1593,7 +1636,7 @@ header .header-wrap .logo h1 img {
 }
 
 .block-info-box {
-  margin-top: 15vh;
+  margin-top: 10vh;
 }
 
 .block-info-box #productInfo {
@@ -1601,7 +1644,7 @@ header .header-wrap .logo h1 img {
   background: rgba(255, 255, 255, 0.9);
   display: block;
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 30px 10px;
   position: relative;
 }
 
@@ -1648,9 +1691,9 @@ header .header-wrap .logo h1 img {
 
 .block-info-box #productInfo h2 {
   text-align: center;
-  padding: 20px 0;
+  padding: 0 0 20px;
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .block-info-box #productInfo .gallery {
@@ -1703,8 +1746,9 @@ header .header-wrap .logo h1 img {
 }
 
 .block-info-box #productInfo .productProperties li img {
-  margin: 3vh auto;
+  margin: 10px auto;
   display: block;
+  width: 65%;
 }
 
 .block-info-box #productInfo .productNutritionalValue {
@@ -1909,10 +1953,32 @@ header .header-wrap .logo h1 img {
   margin: 0 auto;
 }
 
-.profile h3 {
+.profile .wrap-name {
+  position: relative;
+}
+
+.profile .wrap-name h3 {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
+}
+
+.profile .wrap-name button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #86b129;
+  border: none;
+  background: none;
+}
+
+.profile .wrap-name button:hover,
+.profile .wrap-name button:active,
+.profile .wrap-name button:focus,
+.profile .wrap-name button:visited {
+  text-decoration: none;
+  color: #86b129;
+  outline: none;
 }
 
 .list-item {
@@ -1955,6 +2021,33 @@ header .header-wrap .logo h1 img {
   font-size: 22px;
   display: inline-block;
   vertical-align: middle;
+}
+
+.list-item.categories-item {
+  width: 46.3%;
+  display: inline-block;
+  padding: 18px;
+}
+
+.list-item.categories-item a {
+  display: block;
+  text-align: center;
+  color: #000000;
+}
+
+.list-item.categories-item a:hover,
+.list-item.categories-item a:focus,
+.list-item.categories-item a:visited {
+  color: #000000;
+  text-decoration: none;
+  outline: none;
+}
+
+.list-item.categories-item a i {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 30px;
 }
 
 .heading-list {

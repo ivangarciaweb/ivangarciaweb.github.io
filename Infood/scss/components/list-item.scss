@@ -28,10 +28,34 @@
         }
     }
     i{
-        color: #86b129;
+        color: $greenInfood;
         font-size: 22px;
         display: inline-block;
         vertical-align: middle;
+    }
+    &.categories-item{
+        width: 46.3%;
+        display: inline-block;
+        padding: 18px;
+        a{
+            display: block;
+            text-align: center;
+            color: $black;
+            &:hover,
+            &:focus,
+            &:visited{
+                color: $black;
+                text-decoration: none;
+                outline: none;
+            }
+            i{
+                display: block;
+                margin-bottom: 10px;
+                text-align: center;
+                font-size: 30px;
+            }            
+        }
+
     }
 }
 

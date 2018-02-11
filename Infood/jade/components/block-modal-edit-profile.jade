@@ -1,0 +1,21 @@
+// Modal para introducción para editar los datos de perfil
+#modalEditProfile.modal.fade(role='dialog')
+    .modal-dialog
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal')
+                    i.icon-cross
+                h4 Editar datos de perfil
+            .modal-body
+                form
+                    .form-group
+                        label(for='pwd') Nombre y primer apellido:
+                        input#pwd.form-control(type='password', placeholder='Enter password', name='pwd')
+                    .form-group
+                        label(for='email') Email:
+                        input#email.form-control(type='email', placeholder='Enter email', name='email')
+                    .form-group
+                        label(for='pwd') Password:
+                        input#pwd.form-control(type='password', placeholder='Enter password', name='pwd')
+                    button.btn.btn-default(type='submit') Guardar
+                    button.btn.btn-default(type='button', data-dismiss='modal') Cerrar

@@ -29,7 +29,7 @@
         top: 0;
         height: 100%;
         .btn-close {
-            color: #ffffff;
+            color: $white;
             position: absolute;
             top: 3px;
             right: 3px;
@@ -46,8 +46,8 @@
             width: 90%;
             padding: 10px;
             text-transform: uppercase;
-            background: #86b129;
-            color: #ffffff;
+            background: $greenInfood;
+            color: $white;
             font-size: 12px;
             letter-spacing: 1px;
             border: none;

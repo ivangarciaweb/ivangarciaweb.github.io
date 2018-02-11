@@ -10,12 +10,31 @@
             margin: 0 auto;
         }
     }
-    h3{
-        text-align: center;
-        font:{
-            size: 18px;
-            weight: bold;
+    .wrap-name{
+        position: relative;
+        h3{
+            text-align: center;
+            font:{
+                size: 18px;
+                weight: bold;
+            }
         }
+        button{
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: $greenInfood;
+            border: none;
+            background: none;
+            &:hover,
+            &:active,
+            &:focus,
+            &:visited{
+                text-decoration: none;
+                color: $greenInfood;
+                outline: none;
+            }
+        }    
     }
 }
 

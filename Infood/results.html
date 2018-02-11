@@ -41,15 +41,17 @@
       <button id="js-close-menu" class="btn-close"><i class="icon-close"></i></button>
       <div class="profile">
         <div class="wrap-img"><img src="img/boy.svg" alt="Chico"></div>
-        <h3>Iván García</h3>
+        <div class="wrap-name">
+          <h3>Iván García</h3>
+          <button data-toggle="modal" data-target="#modalEditProfile"><i class="icon-edit"></i></button>
+        </div>
       </div>
       <nav>
         <ul>
-          <li><a href="/buscar.html">Inicio</a></li>
-          <li><a href="/results.html">Últimas busquedas</a></li>
-          <li><a href="/favorites.html">Favoritos</a></li>
-          <li><a href="">Alimentos por categoría</a></li>
-          <li><a href="">Contacto</a></li>
+          <li><a href="buscar.html">Inicio<i class="icon-home"></i></a></li>
+          <li><a href="results.html">Últimas busquedas<i class="icon-history"></i></a></li>
+          <li><a href="favorites.html">Favoritos<i class="icon-favorite-menu"></i></a></li>
+          <li><a href="categories.html">Alimentos por categoría<i class="icon-category"></i></a></li>
         </ul>
       </nav>
       <div class="wrap-logo"><img src="img/logo_infood_black.svg"></div>
@@ -148,6 +150,35 @@
         </ul>
       </section>
     </main>
+    <!-- Modal para introducción para editar los datos de perfil-->
+    <div id="modalEditProfile" role="dialog" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" class="close"><i class="icon-cross"></i></button>
+            <h4>Editar datos de perfil</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="pwd">Nombre y primer apellido:</label>
+                <input id="pwd" type="password" placeholder="Enter password" name="pwd" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input id="email" type="email" placeholder="Enter email" name="email" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input id="pwd" type="password" placeholder="Enter password" name="pwd" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-default">Guardar</button>
+              <button type="button" data-dismiss="modal" class="btn btn-default">Cerrar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer role="contentinfo">
       <div class="container">
         <div class="row"></div>

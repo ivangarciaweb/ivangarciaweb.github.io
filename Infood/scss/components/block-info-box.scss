@@ -1,11 +1,11 @@
 .block-info-box{
-    margin-top: 15vh;
+    margin-top: 10vh;
     #productInfo {
         width: 95%;
         background: rgba(255,255,255,0.90);
         display: block;
         margin: 0 auto;
-        padding: 30px 20px;
+        padding: 30px 10px;
         position: relative;
         i{
             display: block;
@@ -46,9 +46,9 @@
         }
         h2 {
             text-align: center;
-            padding: 20px 0;
+            padding:0 0 20px;
             text-transform: uppercase;
-            font-size: 32px;
+            font-size: 24px;
         }
         .gallery {
             display: block;
@@ -90,8 +90,9 @@
                     }
                 }
                 img{
-                    margin: 3vh auto;
+                    margin: 10px auto;
                     display: block;
+                    width: 65%;
                 }
             }
         }
