@@ -1,5 +1,5 @@
 // Modal para introducción para editar los datos de perfil
-#modalEditProfile.modal.fade(role='dialog')
+#modalEditProfile.modal.modal-edit-profile.fade(role='dialog')
     .modal-dialog
         .modal-content
             .modal-header
@@ -10,12 +10,15 @@
                 form
                     .form-group
                         label(for='pwd') Nombre y primer apellido:
-                        input#pwd.form-control(type='password', placeholder='Enter password', name='pwd')
+                        input#pwd.form-control(type='text', name='pwd')
                     .form-group
                         label(for='email') Email:
-                        input#email.form-control(type='email', placeholder='Enter email', name='email')
+                        input#email.form-control(type='email', name='email')
                     .form-group
-                        label(for='pwd') Password:
-                        input#pwd.form-control(type='password', placeholder='Enter password', name='pwd')
+                        label(for='password') Contraseña:
+                        input#pwd.form-control(type='password', name='password')
+                    .form-group.mB40
+                        label(for='passwordrepeat') Repite contraseña:
+                        input#pwd.form-control(type='password', name='passwordrepeat')
                     button.btn.btn-default(type='submit') Guardar
                     button.btn.btn-default(type='button', data-dismiss='modal') Cerrar

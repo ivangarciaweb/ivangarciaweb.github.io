@@ -1,0 +1,60 @@
+.modal-edit-profile{
+    .modal-dialog{
+        .modal-content{
+            border: none;
+            border-radius: 0;
+            .modal-header{ 
+                padding: 5px 15px;               
+                background: $greenInfood;
+                h4{
+                    font-size: 14px;
+                    color: $white;
+                }
+                .close{
+                    color: $white;
+                    opacity: 1;
+                    margin-top: -7px;
+                    i{
+                        font-size: 12px;
+                    }
+                }
+            }
+            .modal-body{
+                padding: 20px 15px;
+                form{
+                    .form-group{
+                        margin-bottom: 25px;
+                        label{
+                            margin: 0;
+                        }
+                        .form-control{
+                            font-size: 14px;
+                            border-radius: 0;
+                            border: none;
+                            border-bottom: 1px solid #c7c7c7;
+                            box-shadow: none;
+                            background: none;
+                            cursor: text;
+                            margin-top: -5px;
+                        }                        
+                    }
+
+                    .btn{
+                        margin: 5px auto;
+                    }                    
+                }
+            }
+        }
+    }
+}
+@media(min-width:768px){
+
+}
+
+@media(min-width:992px){
+    
+}
+
+@media(min-width:1200px){
+    
+}

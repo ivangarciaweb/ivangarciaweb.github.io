@@ -1636,7 +1636,7 @@ header .header-wrap .logo h1 img {
 }
 
 .block-info-box {
-  margin-top: 10vh;
+  margin-top: 22vh;
 }
 
 .block-info-box #productInfo {
@@ -1940,6 +1940,58 @@ header .header-wrap .logo h1 img {
   font-size: 12px;
 }
 
+.modal-edit-profile .modal-dialog .modal-content {
+  border: none;
+  border-radius: 0;
+}
+
+.modal-edit-profile .modal-dialog .modal-content .modal-header {
+  padding: 5px 15px;
+  background: #86b129;
+}
+
+.modal-edit-profile .modal-dialog .modal-content .modal-header h4 {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.modal-edit-profile .modal-dialog .modal-content .modal-header .close {
+  color: #ffffff;
+  opacity: 1;
+  margin-top: -7px;
+}
+
+.modal-edit-profile .modal-dialog .modal-content .modal-header .close i {
+  font-size: 12px;
+}
+
+.modal-edit-profile .modal-dialog .modal-content .modal-body {
+  padding: 20px 15px;
+}
+
+.modal-edit-profile .modal-dialog .modal-content .modal-body form .form-group {
+  margin-bottom: 25px;
+}
+
+.modal-edit-profile .modal-dialog .modal-content .modal-body form .form-group label {
+  margin: 0;
+}
+
+.modal-edit-profile .modal-dialog .modal-content .modal-body form .form-group .form-control {
+  font-size: 14px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #c7c7c7;
+  box-shadow: none;
+  background: none;
+  cursor: text;
+  margin-top: -5px;
+}
+
+.modal-edit-profile .modal-dialog .modal-content .modal-body form .btn {
+  margin: 5px auto;
+}
+
 .profile .wrap-img {
   background: #eeeeee;
   border-radius: 50%;
@@ -2070,6 +2122,53 @@ header .header-wrap .logo h1 img {
 .heading-list p {
   text-align: center;
   padding: 0 10px;
+  margin: 0;
+}
+
+.product-detail {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+}
+
+.product-detail .heading-list img {
+  width: 80%;
+  margin: 20px auto 20px;
+}
+
+.product-detail .productProperties {
+  margin: 0;
+}
+
+.product-detail .productProperties li {
+  list-style-type: none;
+}
+
+.product-detail .productProperties li p {
+  word-break: break-all;
+  border: 1px solid #dcdcdc;
+}
+
+.product-detail .productProperties li p .title {
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  background: #dcdcdc;
+  padding: 5px 10px;
+}
+
+.product-detail .productProperties li p .description {
+  font-size: 16px;
+  display: block;
+  padding: 5px 10px;
+}
+
+.product-detail .productProperties li p .description img {
+  display: block;
+  width: 70%;
+  margin: 10px auto;
+}
+
+.product-detail table {
   margin: 0;
 }
 
